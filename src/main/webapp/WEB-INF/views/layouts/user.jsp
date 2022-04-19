@@ -29,6 +29,40 @@
 <link rel="stylesheet" href="<c:url value="/assets/user/app.css"/> " />
 <link rel="stylesheet" href="<c:url value="/asset-info/css/style.css"/> "/>
 
+<style>
+:root { -
+	-main-color: #c0392b; -
+	-body-bg: #181616; -
+	-box-bg: #221f1f; -
+	-text-color: #fff; -
+	-nav-height: 60px; -
+	-space-top: 30px;
+}
+
+body {
+	font-family: 'Cairo', sans-serif;
+	background-color: var(--body-bg);
+	color: var(--text-color);
+	padding-top: var(--nav-height);
+	align-items: center;
+}
+
+.wrapper {
+	width: 460px;
+	padding: 20px;
+	margin: auto;
+}
+
+.btndn {
+	text-align: center;
+	margin: 20px;
+}
+
+p {
+	text-align: center;
+}
+</style>
+
 </head>
 
 <body>

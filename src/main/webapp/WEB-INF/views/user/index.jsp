@@ -9,12 +9,15 @@
 		<div class="hero-slide">
 			<div class="owl-carousel carousel-nav-center" id="hero-carousel">
 				<!-- SLIDE ITEM -->
-				<div class="hero-slide-item">
-					<img src="<c:url value="/assets/user/images/black-banner.png"/>" alt="">
+				
+				<c:forEach var="item" items="${ slides }" varStatus="index">
+					
+					<div class="hero-slide-item">
+					<img src="<c:url value="/assets/user/images/${ item.img }"/>" alt="">
 					<div class="overlay"></div>
 					<div class="hero-slide-item-content">
 						<div class="item-content-wraper">
-							<div class="item-content-title top-down">Black Panther</div>
+							<div class="item-content-title top-down">${ item.nameFilm }</div>
 							<div class="movie-infos top-down delay-2">
 								<div class="movie-info">
 									<i class="bx bxs-star"></i> <span>9.5</span>
@@ -30,10 +33,7 @@
 								</div>
 							</div>
 							<div class="item-content-description top-down delay-4">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-								possimus eius. Deserunt non odit, cum vero reprehenderit
-								laudantium odio vitae autem quam, incidunt molestias ratione
-								mollitia accusantium, facere ab suscipit.</div>
+								${ item.content }</div>
 							<div class="item-action top-down delay-6">
 								<a href="#" class="btn btn-hover"> <i
 									class="bx bxs-right-arrow"></i> <span>Watch now</span>
@@ -42,7 +42,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- END SLIDE ITEM -->
+					
+				</c:forEach>
+			    <%-- <!-- END SLIDE ITEM -->
 				<!-- SLIDE ITEM -->
 				<div class="hero-slide-item">
 					<img src="<c:url value="/assets/user/images/supergirl-banner.jpg"/> " alt="">
@@ -112,7 +114,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- END SLIDE ITEM -->
+				<!-- END SLIDE ITEM -->  --%>
 			</div>
 		</div>
 		<!-- END HERO SLIDE -->
